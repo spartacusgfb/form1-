@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+<form>
+  T.C KİMLİK NUMARANIZ
+  <input type="text"   value="" id="tc"><br><br>
+  ADINIZ 
+  <input type="text" name = "isim" id="stil" value=""><br><br>
+  SOYADINIZ
+  <input type="text" name = "soyad" id="still" value=""><br><br>
+  DOĞUM TARİHİNİZ 
+  <input type="text" name="" id="stilll" value=""><br><br>
+  CİNSİYETİNİZ
+    <br><br>
+    <input type = "radio" name = "cinsiyet" id="cinsE" value="E" checked>Erkek
+    <input type="radio" name="cinsiyet" id="cinsK" value="K">Kadın<br><br>
+    EĞİTİM DURUMUNUZ <br><br>
+    <select name="" id="egit">
+      <option>İlköğretim </option>
+      <option>Ortaöğretim</option>
+      <option>Önlisans</option>
+      <option>Lisans</option>
+      <option>Yükseklisans</option>
+    </select><br><br> 
+
+  İLETİŞİM BİLGİLERİNİZ <br><br>
+  CEP TELEFON NO
+  <input type="text" name="cep no" id="cep" value=""><br><br>
+  ADRES 
+  <TExtarea id="adres"></TExtarea><br><br><br>
+  <div id="goster"></div>
+  <div id="goster1"></div>
+  <div id="goster2"></div>
+  <div id="goster3"></div>
+  <div id="goster4"></div>
+  <div id="goster5"></div>
+  <div id="goster6"></div>
+  <div id="goster7"></div>
+  <div id="goster8"></div>
+  
+
+  <button id="send" onclick="kaydet()">GÖNDER</button>
+
+</form>
+  <script>
+     document.getElementById("send").addEventListener("click", function(event){
+      event.preventDefault()
+    });
+    table = "<table border='1'>" +
+      "<tr><th>TC kımlıkNo </th></tr>" ;
+
+  function kaydet(){
+   
+
+    let tc=document.getElementById("tc");
+    let ad=document.getElementById("stil");
+    let soyad=document.getElementById("still");
+    let tarih=document.getElementById("stilll");
+    let cinsiyet=document.getElementById("cinsE");
+    let egitim=document.getElementById("egit");
+    let cep=document.getElementById("cep");
+    let adres=document.getElementById("adres");
+    let goster=document.getElementById("goster");
+    let goster1=document.getElementById("goster1");
+    let goster2=document.getElementById("goster2");
+    let goster3=document.getElementById("goster3");
+    let goster4=document.getElementById("goster4");
+    let goster5=document.getElementById("goster5");
+    let goster6=document.getElementById("goster6");
+    let goster7=document.getElementById("goster7");
+    let goster8=document.getElementById("goster8");
+   
+
+    //send.onclick=function(){
+    
+table +="<tr><td>" + tc.value + "</td></tr>";
+     
+  
+    goster.innerHTML= table; //tc.value;
+    goster1.innerHTML=stil.value;
+    goster2.innerHTML=still.value;
+    goster3.innerHTML=stilll.value;
+    goster4.innerHTML=cins.value;
+    goster5.innerHTML=egit.value;
+    goster6.innerHTML=cep.value;
+    goster7.innerHTML=adres.value;
+   
+    }
+    </script>
+  
+
+
+</body>
+</html>
